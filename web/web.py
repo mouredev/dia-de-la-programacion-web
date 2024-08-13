@@ -54,7 +54,8 @@ app = rx.App(
     head_components=[
         rx.script(
             src=f"https://www.googletagmanager.com/gtag/js?id={
-                constants.GOOGLE_ANALYTICS_TAG}"
+                constants.GOOGLE_ANALYTICS_TAG}",
+            strategy="afterInteractive"
         ),
         rx.script(
             f"""
@@ -62,7 +63,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){{dataLayer.push(arguments);}}
 gtag('js', new Date());
 gtag('config', '{constants.GOOGLE_ANALYTICS_TAG}');
-"""
+""",
+            strategy="afterInteractive",
         ),
     ],
 )
