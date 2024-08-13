@@ -28,7 +28,8 @@ def about() -> rx.Component:
                 src="/avatar.jpg",
                 width="220px",
                 height="220px",
-                border_radius="50%"
+                border_radius="50%",
+                alt="Avatar de Brais Moure"
 
             ),
             flex_direction=["column-reverse", "row"],

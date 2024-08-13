@@ -1,4 +1,5 @@
 import reflex as rx
+from web.styles.fonts import FontWeight
 from web.styles.styles import Size, SizeEM, Color
 
 
@@ -9,12 +10,14 @@ def partner(image: str, url: str, text: str) -> rx.Component:
                 src=image,
                 height="80px",
                 width="auto",
-                padding_right=SizeEM.BIG.value
+                padding_right=SizeEM.BIG.value,
+                alt=f"Patrocinador: {image.capitalize}"
             ),
             rx.text(
                 text,
                 size=Size.SMALL.value,
-                color=Color.LIGHT.value
+                color=Color.LIGHT.value,
+                font_weight=FontWeight.BOLD
             ),
             spacing=Size.ZERO.value
         ),

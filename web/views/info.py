@@ -1,6 +1,6 @@
 import reflex as rx
 from web.styles import styles
-from web.styles.styles import Size
+from web.styles.styles import Size, SizeEM
 from web.styles.colors import Color
 
 
@@ -8,7 +8,7 @@ def info() -> rx.Component:
     return rx.center(
         rx.vstack(
             rx.heading(
-                "¿Por qué se celebra el día 12?",
+                "¿Por qué se celebra el día 12 de septiembre?",
                 as_="h2", size=Size.BIG.value
             ),
             rx.vstack(
@@ -43,10 +43,15 @@ def _info_text(icon, text) -> rx.Component:
     return rx.hstack(
         rx.icon(
             icon,
-            color=Color.ACCENT.value
+            color=Color.ACCENT.value,
+            height=SizeEM.BIG.value,
+            width="auto"
         ),
         rx.text(
             text,
-            size=Size.DEFAULT.value
-        )
+            size=Size.DEFAULT.value,
+            width="100%"
+        ),
+        spacing=Size.DEFAULT.value,
+        align="center"
     ),

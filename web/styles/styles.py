@@ -43,7 +43,6 @@ BASE_STYLE = {
     rx.button: {
         "cursor": "pointer",
         "color": Color.DARK.value,
-        "background": Color.ACCENT.value,
         "_hover": {
             "color": Color.LIGHT.value,
             "background": Color.SECONDARY.value
