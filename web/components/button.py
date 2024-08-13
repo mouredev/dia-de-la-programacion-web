@@ -11,7 +11,8 @@ def button(icon: str, text: str, url: str, secondary=False) -> rx.Component:
         text,
         size=Size.DEFAULT.value,
         background=Color.LIGHT.value if secondary else Color.ACCENT.value,
-        on_click=rx.redirect(url, external=True)
+        on_click=rx.redirect(url, external=True),
+        title="" if text else icon
     )
 
 

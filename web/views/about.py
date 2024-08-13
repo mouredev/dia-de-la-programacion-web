@@ -2,6 +2,7 @@ import reflex as rx
 import web.styles.styles as styles
 from web import constants
 from web.styles.styles import Size
+from web.styles.colors import Color
 from web.components.button import button
 
 
@@ -25,10 +26,11 @@ def about() -> rx.Component:
                 spacing=Size.DEFAULT.value
             ),
             rx.image(
-                src="/avatar.jpg",
+                src="/avatar.webp",
                 width="220px",
                 height="220px",
                 border_radius="50%",
+                background=Color.ACCENT.value,
                 alt="Avatar de Brais Moure"
 
             ),

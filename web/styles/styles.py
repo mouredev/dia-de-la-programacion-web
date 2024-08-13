@@ -6,7 +6,7 @@ from .fonts import Font, FontWeight
 
 STYLESHEETS = [
     "/css/background.css",
-    "https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Roboto:wght@400;500;700&display=swap"
+    "https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&family=Roboto:wght@400;700&display=swap"
 ]
 
 MAX_WIDTH = "1000px"
@@ -47,6 +47,9 @@ BASE_STYLE = {
             "color": Color.LIGHT.value,
             "background": Color.SECONDARY.value
         }
+    },
+    rx.link: {
+        "font_weight": FontWeight.BOLD.value
     }
 }
 

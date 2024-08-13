@@ -57,9 +57,9 @@ def header() -> rx.Component:
                     )
                 ),
                 rx.flex(
-                    badge("Charlas", "message-circle"),
-                    badge("Regalos", "gift"),
-                    badge("Comunidad", "heart"),
+                    badge("Charlas", "message-circle", True),
+                    badge("Regalos", "gift", True),
+                    badge("Comunidad", "heart", True),
                     spacing=Size.SMALL.value,
                     padding_top=SizeEM.SMALL.value,
                 ),

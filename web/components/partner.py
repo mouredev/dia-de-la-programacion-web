@@ -16,7 +16,7 @@ def partner(image: str, url: str, text: str) -> rx.Component:
             rx.text(
                 text,
                 size=Size.SMALL.value,
-                color=Color.LIGHT.value,
+                color=Color.DARK.value,
                 font_weight=FontWeight.BOLD
             ),
             spacing=Size.ZERO.value

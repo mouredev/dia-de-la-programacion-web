@@ -12,7 +12,9 @@ def partners() -> rx.Component:
         rx.vstack(
             rx.heading(
                 "Patrocinado por",
-                as_="h3", size=Size.BIG.value
+                as_="h3",
+                size=Size.BIG.value,
+                color=Color.DARK.value
             ),
             rx.flex(
                 partner(
@@ -57,6 +59,7 @@ def partners() -> rx.Component:
                 ),
                 "."
             ),
+            color=Color.DARK.value,
             spacing=Size.DEFAULT.value,
             style=styles.max_width_style
         ),
