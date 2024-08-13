@@ -29,6 +29,7 @@ def info() -> rx.Component:
                 "¡Es nuestro día! Gratis y para todo el mundo. Siéntete orgullos@, ayuda y comparte. ¡Somos una gran comunidad!",
                 icon="heart-handshake",
                 color=Color.ACCENT.value,
+                background_color=Color.ACCENT_ALPHA.value,
                 size="3"
             ),
             spacing=Size.DEFAULT.value,

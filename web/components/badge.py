@@ -8,6 +8,7 @@ def badge(text: str, icon: str) -> rx.Component:
         text,
         size="3",
         color=Color.ACCENT.value,
+        background_color=Color.ACCENT_ALPHA.value,
         radius="full",
         variant="soft"
     )
