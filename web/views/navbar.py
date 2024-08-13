@@ -44,6 +44,7 @@ def navbar() -> rx.Component:
         position="sticky",
         padding_x=SizeEM.BIG.value,
         padding_y=SizeEM.DEFAULT.value,
+        border_bottom=f"1px solid {Color.SECONDARY.value}",
         z_index="5",
         top="0",
         width="100%"

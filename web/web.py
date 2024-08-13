@@ -19,22 +19,22 @@ def index() -> rx.Component:
         rx.vstack(
             header(),
             info(),
-            rx.divider(background=Color.SECONDARY.value),
+            _separator(),
             block(
                 "Charlas", "message-circle",
                 "Mesas redondas formadas por referentes del sector"
             ),
-            rx.divider(background=Color.SECONDARY.value),
+            _separator(),
             block(
                 "Regalos", "gift",
                 "Sorteo de regalos entre todos los asistentes"
             ),
-            rx.divider(background=Color.SECONDARY.value),
+            _separator(),
             block(
                 "Agenda", "calendar-clock",
                 "Esto es todo lo que te espera"
             ),
-            rx.divider(background=Color.SECONDARY.value),
+            _separator(),
             partners(),
             about(),
             footer(),
@@ -42,6 +42,10 @@ def index() -> rx.Component:
             width="100%"
         )
     )
+
+
+def _separator() -> rx.Component:
+    return rx.divider(background=Color.SECONDARY.value)
 
 
 app = rx.App(
