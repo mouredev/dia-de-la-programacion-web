@@ -9,7 +9,8 @@ def partner(image: str, url: str, text: str) -> rx.Component:
             rx.image(
                 src=image,
                 height="80px",
-                width="100%",
+                width="auto",
+                object_fit="contain",
                 padding_right=SizeEM.BIG.value,
                 alt=f"Patrocinador: {image.capitalize}"
             ),
