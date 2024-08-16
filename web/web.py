@@ -10,6 +10,7 @@ from web.views.block import block
 from web.views.partners import partners
 from web.views.about import about
 from web.views.footer import footer
+from web.views.speakers import speakers
 
 
 def index() -> rx.Component:
@@ -20,7 +21,7 @@ def index() -> rx.Component:
             header(),
             info(),
             _separator(),
-            block(
+            speakers(
                 "Charlas", "message-circle",
                 "Mesas redondas formadas por referentes del sector"
             ),
@@ -54,8 +55,7 @@ app = rx.App(
     head_components=[
         rx.script(
             src=f"https://www.googletagmanager.com/gtag/js?id={
-                constants.GOOGLE_ANALYTICS_TAG}",
-            strategy="afterInteractive"
+                constants.GOOGLE_ANALYTICS_TAG}"
         ),
         rx.script(
             f"""
@@ -63,8 +63,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){{dataLayer.push(arguments);}}
 gtag('js', new Date());
 gtag('config', '{constants.GOOGLE_ANALYTICS_TAG}');
-""",
-            strategy="afterInteractive",
+"""
         ),
     ],
 )
