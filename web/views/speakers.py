@@ -6,6 +6,14 @@ from web.styles.styles import Size, SizeEM
 from web.components.badge import badge
 
 
+class Speaker:
+    def __init__(self, name: str, description: str, handler: str, url: str):
+        self.name = name
+        self.description = description
+        self.handler = handler
+        self.url = url
+
+
 def speakers(text: str, icon: str, title: str) -> rx.Component:
     return rx.center(
         rx.vstack(
@@ -17,48 +25,53 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                 ),
                 spacing=SizeEM.SMALL.value,
             ),
-            rx.vstack(
-                rx.hstack(
-                    rx.icon(
-                        "gamepad",
-                        height=SizeEM.BIG.value,
-                        width="auto"
-                    ),
-                    rx.text(
-                        "Desarrollo de videojuegos",
-                        size=Size.BIG.value
-                    ),
-                    spacing=SizeEM.DEFAULT.value,
-                    align="center"
-                ),
-                rx.flex(
-                    _speaker(
+            _speakers_event(
+                "gamepad",
+                "Desarrollo de videojuegos",
+                [
+                    Speaker(
                         "Alva Majo",
                         "Indie gamedev | Majorariatto",
                         "5ro4",
                         "https://alvamajo.com"
                     ),
-                    _speaker(
+                    Speaker(
                         "Rocío Tomé",
                         "Gamedev | Patattie Games",
                         "rothiotome",
                         "https://linktr.ee/rothiotome"
                     ),
-                    _speaker(
+                    Speaker(
                         "Samuel Molina",
                         "Senior Game Content Designer | CloudImperium",
                         "fukuy",
                         "https://samuelmolina.site"
+                    )
+                ]
+            ),
+            _speakers_event(
+                "trending-up",
+                "De Junior a Senior",
+                [
+                    Speaker(
+                        "Afor Digital",
+                        "Frontend developer | CEO de Afordin",
+                        "afor_digital",
+                        "https://twitch.tv/afor_digital"
                     ),
-                    spacing=Size.BIG.value,
-                    flex_direction=["column", "column", "row"],
-                    width="100%",
-                ),
-                background_color=Color.ACCENT_ALPHA.value,
-                spacing=Size.MEDIUM.value,
-                padding="var(--space-5)",
-                border_radius="var(--radius-5)",
-                width="100%"
+                    Speaker(
+                        "Aris Guimerá",
+                        "Mobile developer | Github Star & Microsoft MVP",
+                        "aristidevs",
+                        "https://aristi.dev"
+                    ),
+                    Speaker(
+                        "Carlos Azaustre",
+                        "SWE + Profesor en Universidad Europea | Microsoft MVP & GDE",
+                        "carlosazaustre",
+                        "https://carlosazaustre.es"
+                    )
+                ]
             ),
             rx.text("Más anuncios próximamente..."),
             spacing=Size.BIG.value,
@@ -68,27 +81,59 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
     )
 
 
-def _speaker(name, description, handler, url) -> rx.Component:
+def _speakers_event(icon: str, title: str, speakers: list[Speaker]) -> rx.Component:
+    return rx.vstack(
+        rx.hstack(
+            rx.icon(
+                icon,
+                height=SizeEM.BIG.value,
+                width="auto"
+            ),
+            rx.text(
+                title,
+                size=Size.BIG.value
+            ),
+            spacing=SizeEM.DEFAULT.value,
+            align="center"
+        ),
+        rx.flex(
+            *[
+                _speaker(speaker)
+                for speaker in speakers
+            ],
+            spacing=Size.BIG.value,
+            flex_direction=["column", "column", "row"],
+            width="100%",
+        ),
+        background_color=Color.ACCENT_ALPHA.value,
+        spacing=Size.MEDIUM.value,
+        padding="var(--space-5)",
+        border_radius="var(--radius-5)",
+        width="100%"
+    ),
+
+
+def _speaker(speaker: Speaker) -> rx.Component:
     return rx.vstack(
         rx.image(
-            src=f"/speakers/{handler}.png",
+            src=f"/speakers/{speaker.handler}.png",
             width=rx.breakpoints(initial="100px", sm="150px"),
             height=rx.breakpoints(initial="100px", sm="150px"),
             border_radius="50%",
             background=Color.ACCENT.value,
-            alt=f"Avatar de {name}",
+            alt=f"Avatar de {speaker.name}",
             margin_bottom=SizeEM.DEFAULT.value
         ),
         rx.text(
-            name,
+            speaker.name,
             font_family=Font.DEFAULT.value,
             font_weight=FontWeight.BOLD.value,
             size=Size.MEDIUM_VERY_BIG.value
         ),
-        rx.text(description),
+        rx.text(speaker.description),
         rx.link(
-            f"@{handler}",
-            href=url,
+            f"@{speaker.handler}",
+            href=speaker.url,
             color=Color.ACCENT.value,
             is_external=True
         ),
