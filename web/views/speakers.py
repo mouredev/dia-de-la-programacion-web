@@ -73,6 +73,18 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                     )
                 ]
             ),
+            _speakers_event(
+                "handshake",
+                "Los beneficios de una comunidad",
+                [
+                    Speaker(
+                        "Comunidad Discord",
+                        "Miembros destacados de nuestra comunidad",
+                        "discord",
+                        "https://discord.gg/mouredev"
+                    ),
+                ]
+            ),
             rx.text("Más anuncios próximamente..."),
             spacing=Size.BIG.value,
             style=styles.max_width_style

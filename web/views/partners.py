@@ -32,7 +32,12 @@ def partners() -> rx.Component:
                     "https://elgato.sjv.io/mouredev",
                     "5% código ZZ-MOUREDEV"
                 ),
-                spacing=Size.SMALL.value,
+                partner(
+                    "/partners/mypublicinbox.png",
+                    "https://mypublicinbox.com",
+                    "Contacta con perfiles relevantes"
+                ),
+                spacing=Size.DEFAULT.value,
                 wrap="wrap"
             ),
             rx.spacer(),
