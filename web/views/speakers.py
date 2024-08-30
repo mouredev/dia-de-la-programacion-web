@@ -44,7 +44,7 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                     Speaker(
                         "Marcelo Vázquez",
                         "Hack4u CEO & Founder | Creador de contenido sobre hacking",
-                        "S4vitar",
+                        "s4vitar",
                         "https://youtube.com/s4vitar"
                     )
                 ]
