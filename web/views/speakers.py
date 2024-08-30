@@ -26,6 +26,30 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                 spacing=SizeEM.SMALL.value,
             ),
             _speakers_event(
+                "lock-keyhole",
+                "Ciberseguridad y hacking",
+                [
+                    Speaker(
+                        "Chema Alonso",
+                        "CDO de Telefónica | Doctor en Seguridad Informática",
+                        "chemaalonso",
+                        "https://elladodelmal.com"
+                    ),
+                    Speaker(
+                        "Daniela Maissi",
+                        "Security  Researcher OWASP Foundation | Prev. EC-COUNCIL",
+                        "blindma1den",
+                        "https://danielamaissi.tech"
+                    ),
+                    Speaker(
+                        "Marcelo Vázquez",
+                        "Hack4u CEO & Founder | Creador de contenido sobre hacking",
+                        "S4vitar",
+                        "https://youtube.com/s4vitar"
+                    )
+                ]
+            ),
+            _speakers_event(
                 "gamepad",
                 "Desarrollo de videojuegos",
                 [
