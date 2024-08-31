@@ -7,11 +7,12 @@ from web.components.badge import badge
 
 
 class Speaker:
-    def __init__(self, name: str, description: str, handler: str, url: str):
+    def __init__(self, name: str, description: str, handler: str, url: str, mpi: str = ""):
         self.name = name
         self.description = description
         self.handler = handler
         self.url = url
+        self.mpi = mpi
 
 
 def speakers(text: str, icon: str, title: str) -> rx.Component:
@@ -33,19 +34,22 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "Chema Alonso",
                         "CDO de Telefónica | Doctor en Seguridad Informática",
                         "chemaalonso",
-                        "https://elladodelmal.com"
+                        "https://elladodelmal.com",
+                        "https://mypublicinbox.com/ChemaAlonso"
                     ),
                     Speaker(
                         "Daniela Maissi",
                         "Security  Researcher OWASP Foundation | Prev. EC-COUNCIL",
                         "blindma1den",
-                        "https://danielamaissi.tech"
+                        "https://danielamaissi.tech",
+                        "https://mypublicinbox.com/blindma1den"
                     ),
                     Speaker(
                         "Marcelo Vázquez",
                         "Hack4u CEO & Founder | Creador de contenido sobre hacking",
                         "s4vitar",
-                        "https://youtube.com/s4vitar"
+                        "https://youtube.com/s4vitar",
+                        "https://mypublicinbox.com/S4vitar"
                     )
                 ]
             ),
@@ -93,7 +97,8 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "Carlos Azaustre",
                         "SWE + Profesor en Universidad Europea | Microsoft MVP & GDE",
                         "carlosazaustre",
-                        "https://carlosazaustre.es"
+                        "https://carlosazaustre.es",
+                        "https://mypublicinbox.com/carlosazaustre"
                     )
                 ]
             ),
@@ -167,11 +172,26 @@ def _speaker(speaker: Speaker) -> rx.Component:
             size=Size.MEDIUM_VERY_BIG.value
         ),
         rx.text(speaker.description),
-        rx.link(
-            f"@{speaker.handler}",
-            href=speaker.url,
-            color=Color.ACCENT.value,
-            is_external=True
+        rx.hstack(
+            rx.link(
+                f"@{speaker.handler}",
+                href=speaker.url,
+                color=Color.ACCENT.value,
+                is_external=True
+            ),
+            rx.cond(
+                speaker.mpi != "",
+                rx.image(
+                    "/mpi.png",
+                    width="1.5em",
+                    height="1.5em",
+                    on_click=rx.redirect(
+                        path=speaker.mpi,
+                        external=True
+                    )
+                )
+            ),
+            align="center"
         ),
         width="100%",
         spacing=Size.ZERO.value
