@@ -181,14 +181,20 @@ def _speaker(speaker: Speaker) -> rx.Component:
             ),
             rx.cond(
                 speaker.mpi != "",
-                rx.image(
-                    "/mpi.png",
-                    width="1.5em",
-                    height="1.5em",
-                    on_click=rx.redirect(
-                        path=speaker.mpi,
-                        external=True
-                    )
+                rx.tooltip(
+                    rx.image(
+                        "/mpi.png",
+                        width="1.6em",
+                        height="1.6em",
+                        on_click=rx.redirect(
+                            path=speaker.mpi,
+                            external=True
+                        ),
+                        cursor="pointer"
+                    ),
+                    content=f"""
+Contacta directamente a @{speaker.handler} a través de MyPublicInbox: {speaker.mpi}
+"""
                 )
             ),
             align="center"
