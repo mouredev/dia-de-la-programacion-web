@@ -25,7 +25,7 @@ def partners() -> rx.Component:
                 partner(
                     "/partners/nuwe.png",
                     "https://bit.ly/JobOffersNUWE",
-                    "Aplica a vacantes Tech"
+                    "Compite y demuestra tu talento tech"
                 ),
                 partner(
                     "/partners/elgato.png",
