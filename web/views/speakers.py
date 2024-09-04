@@ -176,7 +176,7 @@ def _speakers_event(icon: str, title: str, speakers: list[Speaker]) -> rx.Compon
         padding="var(--space-5)",
         border_radius="var(--radius-5)",
         width="100%"
-    ),
+    )
 
 
 def _speaker(speaker: Speaker) -> rx.Component:

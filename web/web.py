@@ -8,6 +8,7 @@ from web.views.header import header
 from web.views.info import info
 from web.views.block import block
 from web.views.partners import partners
+from web.views.gifts import gifts
 from web.views.about import about
 from web.views.footer import footer
 from web.views.speakers import speakers
@@ -26,10 +27,7 @@ def index() -> rx.Component:
                 "Mesas redondas formadas por referentes del sector"
             ),
             _separator(),
-            block(
-                "Regalos", "gift",
-                "Sorteo de regalos entre todos los asistentes"
-            ),
+            gifts(),
             _separator(),
             block(
                 "Agenda", "calendar-clock",
