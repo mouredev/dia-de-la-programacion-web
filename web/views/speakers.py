@@ -103,6 +103,31 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                 ]
             ),
             _speakers_event(
+                "beer",
+                "Más allá del código",
+                [
+                    Speaker(
+                        "Héctor de León",
+                        "Programador y creador de contenido | Microsoft MVP",
+                        "powerhdeleon",
+                        "https://hdeleon.net"
+                    ),
+                    Speaker(
+                        "Nicolás Schürmann",
+                        "Programador y creador de contenido | Hola Mundo",
+                        "_nasch_",
+                        "https://holamundo.io"
+                    ),
+                    Speaker(
+                        "Brais Moure",
+                        "Programador y creador de contenido | Github Star & Microsoft MVP",
+                        "mouredev",
+                        "https://moure.dev",
+                        "https://mypublicinbox.com/mouredev"
+                    )
+                ]
+            ),
+            _speakers_event(
                 "handshake",
                 "Los beneficios de una comunidad",
                 [
