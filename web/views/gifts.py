@@ -44,8 +44,16 @@ def gifts() -> rx.Component:
                     "https://cursos.devtalles.com"
                 ),
                 _gift(
-                    "react", "Libros aprendiendo React",
-                    "https://amzn.eu/d/a0mLkl2"
+                    "tc", "Suscripciones a TodoCode",
+                    "https://todocodeacademy.com"
+                ),
+                _gift(
+                    "js", "Libros dominando JavaScript",
+                    "https://leanpub.com/dominandojavascript"
+                ),
+                _gift(
+                    "ntep", "Libros no todo es programar",
+                    "https://notodoesprogramar.com/"
                 ),
                 _gift(
                     "git", "Muchos libros de Git y GitHub",
