@@ -103,6 +103,30 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                 ]
             ),
             _speakers_event(
+                "graduation-cap",
+                "Aprendizaje efectivo",
+                [
+                    Speaker(
+                        "Fernando Herrera",
+                        "Ingeniero fullstack y profesor | DevTalles",
+                        "fernando_her85",
+                        "https://fernando-herrera.com"
+                    ),
+                    Speaker(
+                        "Luisina de Paula",
+                        "Ingeniera y profesora de informática | TodoCode",
+                        "todo_code",
+                        "https://todocodeacademy.com"
+                    ),
+                    Speaker(
+                        "Román (ManzDev)",
+                        "Ingeniero fullstack y creador de contenido| Profesor EOI",
+                        "manz",
+                        "https://manz.dev"
+                    )
+                ]
+            ),
+            _speakers_event(
                 "beer",
                 "Más allá del código",
                 [
@@ -139,7 +163,6 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                     ),
                 ]
             ),
-            rx.text("Más anuncios próximamente..."),
             spacing=Size.BIG.value,
             style=styles.max_width_style
         ),
