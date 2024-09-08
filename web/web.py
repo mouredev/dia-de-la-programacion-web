@@ -6,7 +6,7 @@ from web.styles.colors import Color
 from web.views.navbar import navbar
 from web.views.header import header
 from web.views.info import info
-from web.views.block import block
+from web.views.schedule import schedule
 from web.views.partners import partners
 from web.views.gifts import gifts
 from web.views.about import about
@@ -29,10 +29,7 @@ def index() -> rx.Component:
             _separator(),
             gifts(),
             _separator(),
-            block(
-                "Agenda", "calendar-clock",
-                "Esto es todo lo que te espera"
-            ),
+            schedule(),
             _separator(),
             partners(),
             about(),
