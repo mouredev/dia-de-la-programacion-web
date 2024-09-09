@@ -59,7 +59,7 @@ def schedule() -> rx.Component:
                 "21:30",
                 "lock-keyhole",
                 "Ciberseguridad y hacking + sorteo regalos",
-                "Con Chama Alonso, Daniela Maissi y S4vitar"
+                "Con Chema Alonso, Daniela Maissi y S4vitar"
             ),
             _schedule_event(
                 "22:30",
