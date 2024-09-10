@@ -27,9 +27,9 @@ def schedule() -> rx.Component:
             ),
             _schedule_event(
                 "16:30",
-                "handshake",
-                "Los beneficios de una comunidad + sorteo regalos",
-                "Con miembros destacados de la comunidad de Discord"
+                "lock-keyhole",
+                "Ciberseguridad y hacking + sorteo regalos",
+                "Con Chema Alonso, Daniela Maissi y S4vitar"
             ),
             _schedule_event(
                 "17:30",
@@ -57,9 +57,9 @@ def schedule() -> rx.Component:
             ),
             _schedule_event(
                 "21:30",
-                "lock-keyhole",
-                "Ciberseguridad y hacking + sorteo regalos",
-                "Con Chema Alonso, Daniela Maissi y S4vitar"
+                "handshake",
+                "Los beneficios de una comunidad + sorteo regalos",
+                "Con miembros destacados de la comunidad de Discord"
             ),
             _schedule_event(
                 "22:30",

@@ -28,6 +28,14 @@ def gifts() -> rx.Component:
                     "https://keychron.com/collections/all-keyboards"
                 ),
                 _gift(
+                    "ks", "Logitech MX Keys S",
+                    "https://www.logitech.com/es-es/products/keyboards/mx-keys-s.html"
+                ),
+                _gift(
+                    "m3", "Logitech MX Master 3S",
+                    "https://www.logitech.com/es-es/products/mice/mx-master-3s.910-006559.html"
+                ),
+                _gift(
                     "hm", "Suscripciones Hola Mundo",
                     "https://holamundo.io"
                 ),
