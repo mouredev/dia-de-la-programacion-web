@@ -36,6 +36,14 @@ def gifts() -> rx.Component:
                     "https://www.logitech.com/es-es/products/mice/mx-master-3s.910-006559.html"
                 ),
                 _gift(
+                    "gh", "Merchandising GitHub",
+                    "https://thegithubshop.com"
+                ),
+                _gift(
+                    "ac", "Suscripciones AppCademy",
+                    "https://www.appcademy.dev/"
+                ),
+                _gift(
                     "hm", "Suscripciones Hola Mundo",
                     "https://holamundo.io"
                 ),
@@ -71,7 +79,6 @@ def gifts() -> rx.Component:
                 columns=rx.breakpoints(initial="1", sm="2"),
                 width="100%"
             ),
-            rx.text("Más regalos próximamente..."),
             spacing=Size.BIG.value,
             style=styles.max_width_style
         ),
