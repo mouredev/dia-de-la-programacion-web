@@ -20,6 +20,6 @@ var x = setInterval(function () {
         document.getElementById("countdown").style.display = "none";
         document.getElementById("live").style.display = "flex";
     } else {
-        document.getElementById("countdown").style.display = "initial";
+        document.getElementById("countdown").style.display = "flex";
     }
 }, 1000);
