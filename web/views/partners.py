@@ -16,7 +16,7 @@ def partners() -> rx.Component:
                 size=Size.BIG.value,
                 color=Color.DARK.value
             ),
-            rx.flex(
+            rx.grid(
                 partner(
                     "/partners/raiola.png",
                     "https://mouredev.com/raiola",
@@ -38,32 +38,32 @@ def partners() -> rx.Component:
                     "Contacta con perfiles relevantes"
                 ),
                 spacing=Size.DEFAULT.value,
-                wrap="wrap"
+                columns=rx.breakpoints(initial="1", sm="2")
             ),
-            rx.spacer(),
-            button(
-                "mail",
-                "¿Quieres ser patrocinador?",
-                "mailto:braismoure@mouredev.com",
-                True
-            ),
-            rx.text(
-                "Puedes escribirme a ",
-                rx.link(
-                    "braismoure@mouredev.com",
-                    href="mailto:braismoure@mouredev.com",
-                    is_external=True,
-                    color=Color.DARK.value
-                ),
-                " o contactarme a través de mis redes sociales como ",
-                rx.link(
-                    "@mouredev",
-                    href=constants.MOUREDEV_URL,
-                    is_external=True,
-                    color=Color.DARK.value
-                ),
-                "."
-            ),
+            # rx.spacer(),
+            # button(
+            #     "mail",
+            #     "¿Quieres ser patrocinador?",
+            #     "mailto:braismoure@mouredev.com",
+            #     True
+            # ),
+            # rx.text(
+            #     "Puedes escribirme a ",
+            #     rx.link(
+            #         "braismoure@mouredev.com",
+            #         href="mailto:braismoure@mouredev.com",
+            #         is_external=True,
+            #         color=Color.DARK.value
+            #     ),
+            #     " o contactarme a través de mis redes sociales como ",
+            #     rx.link(
+            #         "@mouredev",
+            #         href=constants.MOUREDEV_URL,
+            #         is_external=True,
+            #         color=Color.DARK.value
+            #     ),
+            #     "."
+            # ),
             color=Color.DARK.value,
             spacing=Size.DEFAULT.value,
             style=styles.max_width_style
