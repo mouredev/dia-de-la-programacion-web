@@ -92,9 +92,24 @@ def header() -> rx.Component:
                     _countdown_text("countdown_minutes", "minutos"),
                     _countdown_text("countdown_seconds", "segundos"),
                     id="countdown",
-                    spacing=Size.MEDIUM.value
+                    spacing=Size.MEDIUM.value,
+                    display="none"
+                ),
+                rx.link(
+                    rx.hstack(
+                        rx.icon(
+                            "radio"
+                        ),
+                        rx.text("EN DIRECTO"),
+                        class_name="blink"
+                    ),
+                    href=constants.TWITCH_URL,
+                    color="red",
+                    id="live",
+                    display="none"
                 ),
                 text_align="center",
+                align_items="center"
             ),
             spacing=Size.BIG.value,
             padding_y=SizeEM.VERY_BIG.value,

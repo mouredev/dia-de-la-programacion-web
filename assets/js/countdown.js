@@ -18,5 +18,8 @@ var x = setInterval(function () {
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").style.display = "none";
+        document.getElementById("live").style.display = "flex";
+    } else {
+        document.getElementById("countdown").style.display = "flex";
     }
 }, 1000);
