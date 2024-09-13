@@ -108,6 +108,7 @@ def header() -> rx.Component:
                     id="live",
                     display="none"
                 ),
+                rx.text("¡Muchísimas gracias! Nos vemos en 2025."),
                 text_align="center",
                 align_items="center"
             ),
@@ -117,7 +118,7 @@ def header() -> rx.Component:
             style=styles.max_width_style,
             position="relative"
         ),
-        rx.script(src="/js/countdown.js"),
+        # rx.script(src="/js/countdown.js"),
         position="relative",
         width="100%",
     )
