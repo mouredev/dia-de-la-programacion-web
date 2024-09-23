@@ -1,4 +1,5 @@
 import reflex as rx
+from web.components.button import button
 from web.styles import styles
 from web.styles.colors import Color
 from web.styles.fonts import Font, FontWeight
@@ -51,7 +52,8 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "https://youtube.com/s4vitar",
                         "https://mypublicinbox.com/S4vitar"
                     )
-                ]
+                ],
+                "https://youtu.be/dXR8j9W1Hxo"
             ),
             _speakers_event(
                 "gamepad",
@@ -75,7 +77,8 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "fukuy",
                         "https://samuelmolina.site"
                     )
-                ]
+                ],
+                "https://youtu.be/_XNfnb463WY"
             ),
             _speakers_event(
                 "trending-up",
@@ -100,7 +103,8 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "https://carlosazaustre.es",
                         "https://mypublicinbox.com/carlosazaustre"
                     )
-                ]
+                ],
+                "https://youtu.be/UgtSUS5a-1M"
             ),
             _speakers_event(
                 "graduation-cap",
@@ -124,7 +128,8 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "manz",
                         "https://manz.dev"
                     )
-                ]
+                ],
+                "https://youtu.be/SSfmGQ8T71k"
             ),
             _speakers_event(
                 "beer",
@@ -149,7 +154,8 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "https://moure.dev",
                         "https://mypublicinbox.com/mouredev"
                     )
-                ]
+                ],
+                ""
             ),
             _speakers_event(
                 "handshake",
@@ -161,7 +167,8 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "discord",
                         "https://discord.gg/mouredev"
                     ),
-                ]
+                ],
+                "https://youtu.be/W6TiJC_kXvU"
             ),
             spacing=Size.BIG.value,
             style=styles.max_width_style
@@ -170,7 +177,7 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
     )
 
 
-def _speakers_event(icon: str, title: str, speakers: list[Speaker]) -> rx.Component:
+def _speakers_event(icon: str, title: str, speakers: list[Speaker], url: str) -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.icon(
@@ -193,6 +200,14 @@ def _speakers_event(icon: str, title: str, speakers: list[Speaker]) -> rx.Compon
             spacing=Size.BIG.value,
             flex_direction=["column", "column", "row"],
             width="100%",
+        ),
+        rx.cond(
+            url != "",
+            button(
+                "youtube",
+                "Ver la charla",
+                url
+            ),
         ),
         background_color=Color.ACCENT_ALPHA.value,
         spacing=Size.MEDIUM.value,
