@@ -155,7 +155,7 @@ def speakers(text: str, icon: str, title: str) -> rx.Component:
                         "https://mypublicinbox.com/mouredev"
                     )
                 ],
-                ""
+                "https://youtu.be/4t4O6GjoLPI"
             ),
             _speakers_event(
                 "handshake",
